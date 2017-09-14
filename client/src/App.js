@@ -1,19 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CategoryList from "./components/CategoryList";
+import Category from "./components/Category";
+// import SignUp from './components/SignUp';
+// import SignIn from './components/SignIn';
+// import GlobalNav from './components/GlobalNav.js';
+// import { setAxiosDefaults } from './util';
+import "./App.css";
 
 class App extends Component {
+  // componentWillMount(){
+    // setAxiosDefaults();
+  // }
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div className="App">
+          <div>
+            <h1>Menu</h1>
+            <div>
+              <Link to="/">Categories</Link>
+              <Link to="/category/1">First Category</Link>
+            </div>
+          </div>
+          {/* <GlobalNav /> */}
+          <Route exact path="/" component={CategoryList}/>
+          {/* <Route exact path="/signup" component={SignUp}/> */}
+          {/* <Route exact path="/signin" component={SignIn}/> */}
+          <Route path="/category/:id" component={Category}/>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }
