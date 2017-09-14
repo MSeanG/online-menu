@@ -28,6 +28,7 @@ item_data.each_pair do |category_name, items|
       title:        item[:title],
       image:        item[:image],
       description:  item[:description],
+      price:        item[:price],
       category:       current_category
     })
   end

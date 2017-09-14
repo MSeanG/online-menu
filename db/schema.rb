@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170913120429) do
     t.string "title"
     t.string "image"
     t.string "description"
-    t.string "price"
+    t.decimal "price"
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
