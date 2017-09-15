@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ItemCard from './ItemCard';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const CategoryStyles = styled.div`
 
