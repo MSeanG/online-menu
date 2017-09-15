@@ -50,11 +50,13 @@ const CategoryCard = (props) => {
     <ItemStyles>
       <div className="title">
 
-        {/* <img src={category.image} alt={category.name} /> */}
-        <h3>{item.title}</h3>
+        <img src={item.image} alt={item.name} />
+        
       </div>
       <div className="body">
-        stuff
+      <h3>{item.title}</h3>
+      {item.description}
+      {item.price}
       </div>
     </ItemStyles>
   );
