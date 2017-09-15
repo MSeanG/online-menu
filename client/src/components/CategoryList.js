@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import CategoryCard from './CategoryCard';
+import styled from 'styled-components';
+
+const CategoryListStyles = styled.div`
+  margin: 20px 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`;
 
 class CategoryList extends Component {
   constructor(){
@@ -17,31 +26,26 @@ class CategoryList extends Component {
 
   _fetchCategories = async () => {
     try {
-      const res = await axios.get('/api/categories');
-      await this.setState({Categories: res.data});
-      return res.data;
+      const response = await axios.get('/api/categories');
+      const categories = response.data;
+      this.setState({categories});
     }
     catch (err) {
-      console.log(err)
-      await this.setState({error: err.message})
-      return err.message
+      this.setState({error: err});
     }
     
   }
 
   render() {
     if (this.state.error){
-      return <div>{this.state.error}</div>
+      return <h1>{this.state.error.message}</h1>
     }
     return (
-      <div>
-        <h1>Categories</h1>
-        {this.state.categories.map(category => (
-          <div>
-            <Link to={`/category/${category.id}`} >{category.name}</Link> 
-          </div>
+      <CategoryListStyles>
+        {this.state.categories.map((category) => (
+          <CategoryCard key={category.id} category={category} />
         ))}
-      </div>
+      </CategoryListStyles>
     );
   }
 }
