@@ -54,10 +54,14 @@ const CategoryCard = (props) => {
         
       </div>
       <div className="body">
-      <h3>{item.title}</h3>
-      {item.description}
-      {item.price}
+        <h3>{item.title}</h3>
+        <div>{item.description}</div>
+        <div>{item.price}</div>
+        <div>
+          <button>Order Online</button>
+        </div>
       </div>
+      
     </ItemStyles>
   );
 };
