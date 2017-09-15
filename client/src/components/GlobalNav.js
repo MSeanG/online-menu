@@ -9,11 +9,13 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5%;
-  background-color: rgba(2, 178, 208, 1);
-  box-shadow: 0px 1px 6px black;
+  background-color: maroon;
+  box-shadow: 0 1px 2px 3px rgba(0,0,0,1);
   a {
+    color:white;
+    font-size: 1.25em;
+    margin: 0 16px;
     text-decoration: none;
-    margin: 0 5px;
     &:visited {
       color: white;
     }
@@ -68,7 +70,7 @@ class GlobalNav extends Component {
     return (
       <Nav>
         <Link to="/">
-          <h1>Tunr</h1>
+          <h1>Menu</h1>
         </Link>
         <div>
           <Link to="/signup">Sign Up</Link>

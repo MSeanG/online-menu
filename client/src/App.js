@@ -4,7 +4,7 @@ import CategoryList from "./components/CategoryList";
 import Category from "./components/Category";
 // import SignUp from './components/SignUp';
 // import SignIn from './components/SignIn';
-// import GlobalNav from './components/GlobalNav.js';
+import GlobalNav from './components/GlobalNav.js';
 // import { setAxiosDefaults } from './util';
 import "./App.css";
 
@@ -16,14 +16,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div>
-            <h1>Menu</h1>
-            <div>
-              <Link to="/">Categories</Link>
-              <Link to="/category/1">First Category</Link>
-            </div>
-          </div>
-          {/* <GlobalNav /> */}
+          <GlobalNav />
           <Route exact path="/" component={CategoryList}/>
           {/* <Route exact path="/signup" component={SignUp}/> */}
           {/* <Route exact path="/signin" component={SignIn}/> */}
