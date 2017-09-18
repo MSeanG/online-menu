@@ -3,7 +3,7 @@ import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 import { setAxiosHeaders } from '../util';
 
-class SignUp extends Component {
+class SignIn extends Component {
  constructor(){
    super();
    this.state = {
@@ -32,7 +32,7 @@ _signIn = async (e) => {
 
  render() {
    if (this.state.redirect){
-     return <Redirect to="/" />
+     return <Redirect to="/account" />
    }
    return (
      <div>
@@ -53,4 +53,4 @@ _signIn = async (e) => {
  }
 }
 
-export default SignUp;
+export default SignIn;

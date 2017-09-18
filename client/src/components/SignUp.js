@@ -92,17 +92,19 @@ class SignUp extends Component {
    const payload = {
      email: this.state.email,
      password: this.state.password,
-     password_confirmation: this.state.password_confirmation
-   }
+     password_confirmation: this.state.password_confirmation,
+    //  nickname: this.state.nickname,
+    //  image: this.state.image
+   } 
    const response = await axios.post('/auth', payload);
    setAxiosHeaders(response.headers);
    this.setState({redirect: true})
- }
+ } 
 
- _signIn = (e) => {
-   e.preventDefault();
-   this.setState({redirect: true})
- }
+//  _signIn = (e) => {
+//    e.preventDefault();
+//    this.setState({redirect: true})
+//  }
 
  _handleChange = (e) => {
    const newState = {...this.state};
@@ -112,7 +114,7 @@ class SignUp extends Component {
 
  render() {
    if (this.state.redirect){
-     return <Redirect to="/" />
+     return <Redirect to="/account" />
    }
    return (
      <FormStyles>
@@ -137,7 +139,7 @@ class SignUp extends Component {
          </div>
          </div>
         </fieldset>
-         <Link to="/signin">Sign In</Link>
+         {/* <Link to="/signin">Sign In</Link> */}
        </form>
      </FormStyles>
    );
