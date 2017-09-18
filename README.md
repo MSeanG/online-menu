@@ -34,6 +34,7 @@ Categories
 ![categories](https://user-images.githubusercontent.com/10038637/30543010-7552adf6-9c4f-11e7-8242-b4aea62313e7.png)
 
 Category
+![category](https://user-images.githubusercontent.com/10038637/30543006-72153c30-9c4f-11e7-9949-adb680de4f50.png)
 
 Form
 
