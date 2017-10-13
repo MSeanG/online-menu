@@ -33,6 +33,8 @@ const ItemStyles = styled.div`
     height:292px;
     width:300px;
     margin-top:8px;
+    margin-right:8px;
+    margin-left:16px;
     background: white;
   }
   img {
@@ -41,6 +43,12 @@ const ItemStyles = styled.div`
   }
   h3{
     padding: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
+  p{
+    font-size: 1em;
+    line-height: 1.5em;
   }
 `;
 
@@ -55,11 +63,11 @@ const CategoryCard = (props) => {
       </div>
       <div className="body">
         <h3>{item.title}</h3>
-        <div>{item.description}</div>
+        <div><p>{item.description}</p></div>
         <div>{item.price}</div>
-        <div>
+        {/* <div>
           <button>Order Online</button>
-        </div>
+        </div> */}
       </div>
       
     </ItemStyles>
