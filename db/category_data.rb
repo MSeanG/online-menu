@@ -2,32 +2,32 @@ def get_category_data
   category_data = {
     'salads' => {
       name: 'Salads',
-      image: '',
+      image: 'http://michael-sean.com/Gillysnow/menu/image/salad/header.png',
       description: ''
     },
     'sandwiches' => {
       name: 'Sandwiches',
-      image: '',
+      image: 'http://michael-sean.com/Gillysnow/menu/image/sandwich/header.png',
       description: ''
     },
     'sides' => {
       name: 'Sides',
-      image: '',
+      image: 'http://michael-sean.com/Gillysnow/menu/image/side/header.png',
       description: ''
     },
     'starters' => {
       name: 'Starters',
-      image: '',
+      image: 'http://michael-sean.com/Gillysnow/menu/image/starter/header.png',
       description: ''
     },
     'steaks' => {
       name: 'Steaks',
-      image: '',
+      image: 'http://michael-sean.com/Gillysnow/menu/image/steak/header.png',
       description: ''
     },
     'specials' => {
       name: 'Specials',
-      image: '',
+      image: 'http://michael-sean.com/Gillysnow/menu/image/special/header.png',
       description: ''
     }
   }
